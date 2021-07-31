@@ -20,4 +20,6 @@ app.use("/user", userController);
 app.use("/message", messageController);
 app.use("/favorite", favoriteController)
 
-app.listen(3005, () => console.log("listening on port 3005"));
+app.listen(process.env.PORT, () => {
+    console.log(`server is listening on ${process.env.PORT}`) 
+});
